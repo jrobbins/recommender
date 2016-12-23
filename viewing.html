@@ -2,14 +2,13 @@
 <head>
   <title>Viewing book</title>
   <style>
-    section {display: none}
-    body.all #all { display: block}
-    body.recent  #recent { display: block}
-    section { background: yellow; margin: 4px; border: 1px solid #ffd }
+    body.all #recent { display: none}
+    body.recent  #all { display: none}
+    section { background: #ffd; margin: 4px; border: 1px solid #dda; padding: 4px; }
   </style>
   
 </head>
-<body id="body">
+<body id="body" class="recent">
 
   <h1>Recommender system</h1>
   
@@ -18,7 +17,7 @@
   <label><input type="radio" name="tab" checked="checked" id="radio1" onclick="document.getElementById('body').className = 'recent'">Recent</label>
   <label><input type="radio" name="tab"  onclick="document.getElementById('body').className = 'all'">All</label>
   
-  <section id="recent" style="display:block">
+  <section id="recent">
     This is the recent shares.
   </section>
 
