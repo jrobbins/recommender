@@ -5,6 +5,7 @@
     section {display: none}
     body.all #all { display: block}
     body.recent  #recent { display: block}
+    section { background: yellow; margin: 4px; border: 1px solid #ffd }
   </style>
   
 </head>
@@ -17,7 +18,7 @@
   <label><input type="radio" name="tab" checked="checked" id="radio1" onclick="document.getElementById('body').className = 'recent'">Recent</label>
   <label><input type="radio" name="tab"  onclick="document.getElementById('body').className = 'all'">All</label>
   
-  <section id="recent">
+  <section id="recent" style="display:block">
     This is the recent shares.
   </section>
 
@@ -25,7 +26,7 @@
     This is all shares.
   </section>
 
-  <a href="login.html"><button>View All</button></a>
+  <a href="login.html"><button>View</button></a>
   
 </body>
 </html>
