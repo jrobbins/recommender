@@ -1,20 +1,30 @@
 <html>
 <head>
   <title>Viewing book</title>
+  <style>
+    section {display: none}
+    #radio1:checked ~ #all { display: block}
+    #radio2:checked ~ #recent { display: block}
+  </style>
+  
 </head>
 <body>
 
   <h1>Recommender system</h1>
   
   <h2>View</h2>
-  This where the content goes.
-
-  <ul>
-    <li>One</li>
-    <li><b>Two</b></li>
-    <li><i>Three</i></li>
-  </ul>
   
+  <label><input type="radio" name="tab" checked="checked">Recent</label>
+  <label><input type="radio" name="tab">All</label>
+  
+  <section id="recent">
+    This is the recent shares.
+  </section>
+
+  <section id="all">
+    This is all shares.
+  </section>
+
   <a href="login.html"><button>View All</button></a>
   
 </body>
