@@ -3,19 +3,19 @@
   <title>Viewing book</title>
   <style>
     section {display: none}
-    #radio1:checked ~ #all { display: block}
-    #radio2:checked ~ #recent { display: block}
+    body.all #all { display: block}
+    body.recent  #recent { display: block}
   </style>
   
 </head>
-<body>
+<body id="body">
 
   <h1>Recommender system</h1>
   
   <h2>View</h2>
   
-  <label><input type="radio" name="tab" checked="checked" id="radio1">Recent</label>
-  <label><input type="radio" name="tab" id="radio2">All</label>
+  <label><input type="radio" name="tab" checked="checked" id="radio1" onselect="document.getElementById('body').className = 'recent'">Recent</label>
+  <label><input type="radio" name="tab"  onselect="document.getElementById('body').className = 'all'">All</label>
   
   <section id="recent">
     This is the recent shares.
