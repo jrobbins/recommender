@@ -3,9 +3,24 @@
 </head>
 <body>
   <h1>I Liked</h1>
+  <datalist id="books">
+  <option value="Harry Potter">
+  <option value="Warriors">
+  <option value="Percy Jackson">
+  <option value="Diary of a Wimpy Kid">
+  <option value="Floors">
+  <option value="Big Nate">
+  <option value="Geronimo Stilton">
+  <option value="Magic Tree House">
+  <option value="Nancy Drew">
+  <option value="Cam Janson">
+  <option value="Hardy Boys">
+  <option value="Magic School Bus">
+</datalist>
+  
   
   <form action="recommendation.html">
-    <input name="t">
+    <input name="t" list="books" size="50">
     <input type="submit" value="Submit">
     <li><a href="liked2.html"><button>Share</button></a></li>
   </form>
