@@ -9,10 +9,10 @@
 <b>Your new friend was placed in your Friend List file. To share books with him, just click on his name in the list and 
 place the name of your book you want to share with the friend.</b>
 </p>
+  <i id="f">Warriors</i><br>
   <i id="t">Warriors</i><br>
-  <i id="t">Warriors</i><br>
-  <i id="t">Warriors</i><br>
-  <i id="t">Warriors</i><br>
+  <i id="g">Warriors</i><br>
+  <i id="s">Warriors</i><br>
   
   
   <script>
@@ -28,9 +28,20 @@ place the name of your book you want to share with the friend.</b>
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
     
-    var bookTitleElement = document.getElementById('t');
-    bookTitleElement.innerText = getParameterByName('t');
+    var friendElement = document.getElementById('f');
+    friendElement.innerText = getParameterByName('f');
+    
+   var teacherElement = document.getElementById('t');
+    teacherElement.innerText = getParameterByName('t');
+    
+    var gradeElement = document. getElementById('g');
+     gradeElement.innerText = getParameterByName('g');
+    
+    
+    var schoolElement = document. getElementById('s');
+     schoolElement.innerText = getParameterByName('s');
   </script>
+  
 <a href="mainfriendlist.html"><button>Main Friend List</button></a>
 </body>
 </html>
