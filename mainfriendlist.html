@@ -15,9 +15,13 @@
 <script>
       var allStars = document.getElementsByTagName('span');
       for (var i = 0; i < allStars.length; i++) {
-            console.log(allStars[i]);
-            allStars[i].addEventListener('click', function (e) {
-                   console.log('ccccc');
+            var el = allStars[i];
+            el.addEventListener('click', function (e) {
+                   if (el.innerText = "Y") {
+                         el.innerText = "X";
+                   } else {
+                         el.innerText = "Y";
+                   }
             });
       }
  </script>      
