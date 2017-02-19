@@ -11,23 +11,7 @@ Friend #1,sent <label><input type="radio" name="tab" checked="checked" id="radio
 Friend #2,sent <label><input type="radio" name="tab" onclick="document.getElementById('body'). className='recent'">Star</label>
       <a href=""><button>Check Out</button></a>
   <div> Liked=43       Disliked=11</div>
-      <i id="t">Warriors</i>
-  <script>
-    function getParameterByName(name, url) {
-      if (!url) {
-       url = window.location.href;
-      }
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    
-    var bookTitleElement = document.getElementById('t');
-    bookTitleElement.innerText = getParameterByName('t');
-  </script>
+      
        
 </body>
 </html>
