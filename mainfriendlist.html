@@ -6,13 +6,18 @@
       <a href="home.html"><h1>Recommender System</h1></a>
 <h1>Main Friend List</h1>
 <ol>    
-<li>Friend #1,sent ☆
+      <li>Friend #1,sent <span>☆</span></li>
       
-<li>Friend #2,sent ☆
+      <li>Friend #2,sent <span>☆</span></li>
       </ol>
       <a href=""><button>Check Out</button></a>
   <div> Liked=43       Disliked=11</div>
       
-       
+<script>
+      var allStars = document.getElementsByTag('span');
+      for (var i = 0; i < allStars.length; i++) {
+            console.log(allStars[i]);
+      }
+ </script>      
 </body>
 </html>
