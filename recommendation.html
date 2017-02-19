@@ -32,7 +32,9 @@ Recommendation
     }
     
     var bookTitleElement = document.getElementById('t');
-    bookTitleElement.innerText = getParameterByName('t');
+    var oldBook = getParameterByName('t');
+    var newBook = oldBook + " part 2";
+    bookTitleElement.innerText = newBook;
   </script>
    
 </body>
