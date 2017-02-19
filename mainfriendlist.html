@@ -17,10 +17,11 @@
       for (var i = 0; i < allStars.length; i++) {
             var el = allStars[i];
             el.addEventListener('click', function (e) {
-                   if (el.innerText == "☆") {
-                         el.innerText = "★";
+                  var t = e.target;
+                   if (t.innerText == "☆") {
+                         t.innerText = "★";
                    } else {
-                         el.innerText = "☆";
+                         t.innerText = "☆";
                    }
             });
       }
