@@ -9,6 +9,23 @@
 <b>Your new friend was placed in your Friend List file. To share books with him, just click on his name in the list and 
 place the name of your book you want to share with the friend.</b>
 </p>
+  <i id="t">Warriors</i>
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) {
+       url = window.location.href;
+      }
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+    var bookTitleElement = document.getElementById('t');
+    bookTitleElement.innerText = getParameterByName('t');
+  </script>
 <a href="mainfriendlist.html"><button>Main Friend List</button></a>
 </body>
 </html>
