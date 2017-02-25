@@ -6,6 +6,8 @@ Recommendation
 </head>
 <body>
   <a href="home.html"><h1>Recommendation System</h1></a> 
+ <p>We think you might like:
+ </p>
   <div>
     <i id="t">Warriors</i>
   </div>
@@ -33,12 +35,13 @@ Recommendation
     
     var bookTitleElement = document.getElementById('t');
     var recs = {
-      "Harry Potter": "Percy Jackson",
-      "Percy Jackson": "Harry Potter",
-      "Hardy Boys": "Nancy Drew",                 
-      "Nancy Drew": "Hardy Boys",      
+      "Harry Potter": "Lord of the Rings",
+      "Percy Jackson": "The 39 Clues",
+      "Hardy Boys": "Sherlock Holmes",                 
+      "Nancy Drew": "The Spiderwick Chronicles",      
     };
     var oldBook = getParameterByName('t');
+    if (!oldBook) return;
     var newBook = oldBook + " book 2";
     if (recs[oldBook]) {
       newBook = recs[oldBook];
