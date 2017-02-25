@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
 <title>
 Recommendation
@@ -32,8 +32,17 @@ Recommendation
     }
     
     var bookTitleElement = document.getElementById('t');
+    var recs = {
+      "Harry Potter": "Percy Jackson",
+      "Percy Jackson": "Harry Potter",
+      "Hardy Boys": "Nancy Drew",                 
+      "Nancy Drew": "Hardy Boys",      
+    };
     var oldBook = getParameterByName('t');
-    var newBook = oldBook + " book 2:";
+    var newBook = oldBook + " book 2";
+    if (recs[oldBook]) {
+      newBook = recs[oldBook];
+    }
     bookTitleElement.innerText = newBook;
   </script>
    
