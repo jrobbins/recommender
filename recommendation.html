@@ -49,12 +49,13 @@ Recommendation
       "Magic School Bus": "I Survived",
     };
     var oldBook = getParameterByName('t');
-    if (!oldBook) return;
-    var newBook = oldBook + " book 2";
-    if (recs[oldBook]) {
-      newBook = recs[oldBook];
+    if (oldBook) { 
+      var newBook = oldBook + " book 2";
+      if (recs[oldBook]) {
+        newBook = recs[oldBook];
+      }
+      bookTitleElement.innerText = newBook;
     }
-    bookTitleElement.innerText = newBook;
   </script>
    
 </body>
