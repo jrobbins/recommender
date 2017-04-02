@@ -6,14 +6,56 @@
  <a href="home.html"><h1>Recommender system</h1></a>
  <h1>Search Result</h1> 
  
- <p>Author: J K Rowling</p>
+ <p id="result-author">Author: J K Rowling</p>
  
- <h3>Harry Potter and the Sorcerer's Stone</h3>
+ <h3 id="result-title">Harry Potter and the Sorcerer's Stone</h3>
  <p>40 likes</p>
  <p>0 dislikes</p>
  <p>Available</p>
  <a href="share3.html"><button>Summary of Book</button></a>
  <a href="Readlink.html"><button>Read</button></a>
 
+ <script>
+    function getParameterByName(name, url) {
+      if (!url) {
+       url = window.location.href;
+      }
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+    var resulttitleElement = document.getElementById('result-title');
+    var resultauthorElement = document.getElementById('result-author');
+    var recs = {
+      "J. K. Rowling": "Harry Potter ",
+      "Rick Riordian": "Percy Jackson",
+      "Sir Arthur Conan Dyle": "Sherlock Holmes",                 
+      "Tony DeTerlizzi": "The Spiderwick Chronicles",
+     "Holly Black": "The Spiderwick Chronicles", 
+      "Andy Weir": "The Martian",
+      "Patrick Carman": "Floors",
+      "Tui T. Sutherland": "Wings Of Fire",
+      "H. G. Wells": "The War of the Worlds",
+      "Stephen Hawking": "George's Keys to the Universe",
+      "Lucy Hawking": "George's Keys to the Universe", 
+      "Carolyn Keene": "Nancy Drew",
+      "Lauren Tarshis": "I Survived",
+    };
+    var searchtitle = getParameterByName('title');
+  var searchauthor = getParameterByName('author');  
+  if (searchtitle) { 
+      var result = searchtitle + " book 2";
+      if (recs[searchtitle]) {
+        result = recs[searchtitle];
+      } else if (recs[searchauthor]) {
+        result = recs[searchauthor];
+      }
+      resultTitleElement.innerText = result;
+    }
+  </script>
 </body>
 </html>
