@@ -28,8 +28,8 @@
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
     
-    var resulttitleElement = document.getElementById('result-title');
-    var resultauthorElement = document.getElementById('result-author');
+    var resulTtitleElement = document.getElementById('result-title');
+    var resultAuthorElement = document.getElementById('result-author');
     var recs = {
       "Harry Potter": "Harry Potter",
       "Warriors": "Warriors",
@@ -54,7 +54,7 @@
       "David A. Adler": "Hardy Boys",
       "Franklin W. Dixon": "Magic School Bus",
     };
-    var searchtitle = getParameterByName('title');
+  var searchtitle = getParameterByName('title');
   var searchauthor = getParameterByName('author');  
   if (searchtitle) { 
       var result = searchtitle + " book 2";
