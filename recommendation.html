@@ -19,7 +19,7 @@ Recommendation
   </div>
     
 <a href=""><button>Check Out</button></a>
-  <div> Liked=43       Disliked=11</div>
+ <div> Liked <span id="likes">43</span>       Disliked=11</div>
   <script>
     function getParameterByName(name, url) {
       if (!url) {
@@ -47,6 +47,7 @@ Recommendation
       "Geronimo Stilton": "George's Keys to the Universe",
       "Cam Janson": "Nancy Drew",
       "Magic School Bus": "I Survived",
+     "Dork Diaries": "Smile"
     };
     var oldBook = getParameterByName('t');
     if (oldBook) { 
@@ -56,6 +57,9 @@ Recommendation
       }
       bookTitleElement.innerText = newBook;
     }
-  </script>
+ var likes = Math.round(Math.random() * 100);
+ var likesElement = document.getElementById('likes');
+ likesElement.innerText = likes;
+ </script>
    
 </body>
