@@ -1,5 +1,5 @@
  <html>
-<head>
+  <head>
 <title>
 Recommendation
 </title>
@@ -8,7 +8,8 @@ Recommendation
   <a href="home.html"><h1>Recommender System</h1></a> 
  <h1>We think you might like:
  </h1>
-  <div>
+ <img id="cover">
+ <div>
     <i id="t">Warriors</i>
   </div>
   <div>
@@ -32,7 +33,7 @@ Recommendation
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
-    
+    var coverElement = document.getElementById('cover');
     var bookTitleElement = document.getElementById('t');
     var recs = {
       "Harry Potter": "Lord of the Rings",
@@ -49,13 +50,20 @@ Recommendation
       "Magic School Bus": "I Survived",
      "Dork Diaries": "Smile"
     };
-    var oldBook = getParameterByName('t');
+    var imgs = {
+      "Lord of the Rings": "https://images-na.ssl-images-amazon.com/images/I/41i-SJkyCQL._AC_US160_.jpg",
+    };
+     var oldBook = getParameterByName('t');
     if (oldBook) { 
       var newBook = oldBook + " book 2";
+      var newImg = null;
       if (recs[oldBook]) {
         newBook = recs[oldBook];
+        newImg = imgs[newBook];
       }
       bookTitleElement.innerText = newBook;
+      bookTitleElement.innerText = newBook;
+      coverElement.src = newImg;
     }
  var likes = Math.round(Math.random() * 100);
  var likesElement = document.getElementById('likes');
