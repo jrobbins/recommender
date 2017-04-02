@@ -30,40 +30,41 @@
     
     var resultTitleElement = document.getElementById('result-title');
     var resultAuthorElement = document.getElementById('result-author');
-    var recs = {
-      "Harry Potter": "Harry Potter",
-      "Warriors": "Warriors",
-      "Percy Jackson": "Percy Jackson",
-      "Diary of a Wimpy Kid": "Diary of a Wimpy Kid",
-      "Floors": "Floors",
-      "Big Nate": "Big Nate",
-      "Geronimo Stilton": "Geronimo Stilton",
-      "Magic Tree House": "Magic Tree House",
-      "Nancy Drew": "Nancy Drew",
-      "Cam Janson": "Cam Janson",
-      "Hardy Boys": "Hardy Boys",
-      "Magic School Bus": "Magic School Bus",
-      "J.K.Rowling": "Harry POtter",
-      "Erin Hunter": "Warriors",
-      "Rick Riordian": "Percy Jackson",
-      "Jeff Kinney": "Diary of a Wimpy Kid",
-      "Patrick Carman": "Floors",
-      "Lincon Pierce": "Big Nate",
-      "Mary Pope Osborne": "Magic Tree House",
-      "Carolyn Keene": "Cam Janson",
-      "David A. Adler": "Hardy Boys",
-      "Franklin W. Dixon": "Magic School Bus",
+    var searchEngine = {
+      "Harry Potter": {title: "Harry Potter", author: "J. K. Rowling"},
+      "Warriors":  {title: "Warriors", author: "Erin Hunter"},
+      "Percy Jackson":  {title: "Percy Jackson", author: ""},
+      "Diary of a Wimpy Kid":  {title: "Diary of a Wimpy Kid", author: ""},
+      "Floors":  {title: "Floors", author: ""},
+      "Big Nate":  {title: "Big Nate", author: ""},
+      "Geronimo Stilton":  {title: "Geronimo Stilton", author: ""},
+      "Magic Tree House":  {title: "Magic Tree House", author: ""},
+      "Nancy Drew":  {title: "Nancy Drew", author: ""},
+      "Cam Janson":  {title: "Cam Janson", author: ""},
+      "Hardy Boys":  {title: "Hardy Boys", author: ""},
+      "Magic School Bus":  {title: "Magic School Bus", author: ""},
+      "J.K.Rowling":  {title: "Harry POtter", author: ""},
+      "Erin Hunter":  {title: "Warriors", author: ""},
+      "Rick Riordian":  {title: "Percy Jackson", author: ""},
+      "Jeff Kinney":  {title: "Diary of a Wimpy Kid", author: ""},
+      "Patrick Carman":  {title: "Floors", author: ""},
+      "Lincon Pierce":  {title: "Big Nate", author: ""},
+      "Mary Pope Osborne":  {title: "Magic Tree House", author: ""},
+      "Carolyn Keene":  {title: "Cam Janson", author: ""},
+      "David A. Adler":  {title: "Hardy Boys", author: ""},
+      "Franklin W. Dixon":  {title: "Magic School Bus", author: ""},
     };
   var searchtitle = getParameterByName('title');
   var searchauthor = getParameterByName('author');  
   if (searchtitle) { 
       var result = searchtitle + " book 2";
-      if (recs[searchtitle]) {
-        result = recs[searchtitle];
-      } else if (recs[searchauthor]) {
-        result = recs[searchauthor];
+      if (searchEngine[searchtitle]) {
+        result = searchEngine[searchtitle];
+      } else if (searchEngine[searchauthor]) {
+        result = searchEngine[searchauthor];
       }
-      resultTitleElement.innerText = result;
+      resultTitleElement.innerText = result.title;
+      resultAuthorElement.innerText = result.author;
     }
   </script>
 </body>
