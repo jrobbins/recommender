@@ -56,16 +56,14 @@
     };
   var searchtitle = getParameterByName('title');
   var searchauthor = getParameterByName('author');  
-  if (searchtitle) { 
-      var result = searchtitle + " book 2";
-      if (searchEngine[searchtitle]) {
-        result = searchEngine[searchtitle];
-      } else if (searchEngine[searchauthor]) {
-        result = searchEngine[searchauthor];
-      }
-      resultTitleElement.innerText = result.title;
-      resultAuthorElement.innerText = result.author;
-    }
+  var result = {title: searchtitle + " book 2", author: "I. M. Wordy"};
+  if (searchEngine[searchtitle]) {
+    result = searchEngine[searchtitle];
+  } else if (searchEngine[searchauthor]) {
+    result = searchEngine[searchauthor];
+  }
+  resultTitleElement.innerText = result.title;
+  resultAuthorElement.innerText = result.author;
   </script>
 </body>
 </html>
