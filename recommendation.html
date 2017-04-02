@@ -19,7 +19,7 @@ Recommendation
   </div>
     
 <a href=""><button>Check Out</button></a>
- <div> Liked <span id="likes">43</span>       Disliked=11</div>
+ <div> Liked <span id="likes">43</span>       Disliked <span id="dislikes">11</span> </div>
   <script>
     function getParameterByName(name, url) {
       if (!url) {
@@ -60,6 +60,11 @@ Recommendation
  var likes = Math.round(Math.random() * 100);
  var likesElement = document.getElementById('likes');
  likesElement.innerText = likes;
+ 
+ var dislikes = Math.round(Math.random() * 100);
+ var dislikesElement = document.getElementById('dislikes');
+   dislikesElement.innerText = dislikes;
+   
  </script>
    
 </body>
